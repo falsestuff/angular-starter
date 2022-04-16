@@ -9,9 +9,8 @@
     "test": "ng test"
   },
   "author": {
-    "name": "danny",
-    "email": "dannyganatan@gmail.com",
-    "url": "https://www.ganatan.com/"
+    "name": "zsofia n",
+    "email": "zsofinnemeth@gmail.com"
   },
   "private": true,
   "dependencies": {
@@ -25,7 +24,9 @@
     "@angular/platform-browser": "13.3.2",
     "@angular/platform-browser-dynamic": "13.3.2",
     "@angular/router": "13.3.2",
-    "rxjs": "7.5.5",
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0",
+    "rxjs": "^7.5.5",
     "tslib": "2.3.1",
     "zone.js": "0.11.5"
   },
