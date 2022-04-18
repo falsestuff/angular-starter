@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { concat, Subscription } from 'rxjs';
 import { PokemonService } from 'src/app/services/pokemon.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-list',
@@ -13,7 +14,10 @@ export class ListComponent implements OnInit, OnDestroy {
 
   subscriptions: Subscription[] = [];
 
-  constructor(private pokemonService: PokemonService) { }
+  constructor(
+    private pokemonService: PokemonService, 
+    private _snackBar: MatSnackBar,
+    ) { }
 
   get pokemons(): any[] {
     return this.pokemonService.pokemons;
@@ -50,11 +54,18 @@ export class ListComponent implements OnInit, OnDestroy {
 
 
   saveToCollection(pokemon: string) {
-    this.pokemonService.saveToCollection(pokemon)
+    this.pokemonService.saveToCollection(pokemon);
+    this._snackBar.open('Saved to My Pokemon Collection', 'Close', {
+      duration: 3000
+    });
+
   }
 
   saveToWishlist(pokemon: string) {
     this.pokemonService.saveToWishlist(pokemon)
+    this._snackBar.open('Saved to My Pokemon Wishlist', 'Close', {
+      duration: 3000
+    });
   }
 
 }
