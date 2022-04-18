@@ -43,6 +43,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 	cursor: pointer;
 }
 
+.bg-dark {
+	background-color: #000000;
+	opacity: 0.75;
+	color: #fff;
+}
+
 .bg-normal {
 	background-color: #A8A77A;
 	color: #fff;

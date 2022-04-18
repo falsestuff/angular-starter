@@ -48,4 +48,13 @@ export class ListComponent implements OnInit, OnDestroy {
     return this.pokemonService.getType(pokemon);
   }
 
+
+  saveToCollection(pokemon: string) {
+    this.pokemonService.saveToCollection(pokemon)
+  }
+
+  saveToWishlist(pokemon: string) {
+    this.pokemonService.saveToWishlist(pokemon)
+  }
+
 }

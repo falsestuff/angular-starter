@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListComponent } from './components/list/list.component';
 import { ViewComponent } from './components/view/view.component';
+import { CollectionComponent } from './components/collection/collection.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    ViewComponent
+    ViewComponent,
+    CollectionComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,
